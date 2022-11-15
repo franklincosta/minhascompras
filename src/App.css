@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+.table tr td{
+  vertical-align: middle;
+}
+@media screen and (max-width: 768px){
+  .table thead{
+    display: none;
+  }
+ 
+  .table tr td{
+    display: block;
+    vertical-align: middle;
+  }
+  .table tr td:not(#actionItem){
+    text-align: right;
+  }
+  .table tr td::before{
+    content:attr(data-headerdata);
+    float: left;
+    font-weight: 600;
+  }
+}
